@@ -1,6 +1,10 @@
 sass:
-	sass --watch sassFiles:stylesheets
+	sass sassFiles/main.sass stylesheets/main.css
 pug:
-	pug -wP pugFiles -o .
-all: sass pug
+	pug -P pugFiles -o .
+build: sass pug
 	open index.html
+wsass:
+	sass --watch sassFiles:stylesheets
+wpug:
+	pug -wP pugFiles -o .
