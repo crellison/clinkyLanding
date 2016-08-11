@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/crellison/clinkyLanding#readme",
   "dependencies": {
-    "pug": "^2.0.0-beta5"
+    "pug": "^2.0.0-beta5",
+    "pug-lint": "^2.3.0"
   }
 }
