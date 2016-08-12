@@ -1,0 +1,159 @@
+$gold: #f5b606
+$dark: #2e2e2e
+$light: #fcfcfc
+
+$font-stack: 'League Spartan', 'Helvtica Neue', sans-serif
+$foundation-break: 640px
+
+body
+	background-color: $dark
+	padding: 0
+	margin: 0
+	position: relative
+
+a
+	text-decoration: none !important
+
+.button
+	padding: 10px 15px 5px 15px
+	& > *
+		padding: 0
+		margin: 0
+
+// First Section
+
+.topbar
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+
+h1,h2,h3,h4,h5,h6,p,a
+	font-family: $font-stack
+	color: $dark
+
+.title
+	color: $light
+	text-align: center
+
+.brand
+	margin-top: 20px
+	margin-left: 20px
+	text-align: left
+
+#download
+	top: 20px
+	right: 20px
+	position: absolute
+	background-color: $gold
+
+#initial
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../static/bg2.jpg) no-repeat center center fixed
+	-webkit-background-size: cover
+	-moz-background-size: cover
+	-o-background-size: cover
+	background-size: cover
+	display: flex
+	justify-content: center
+	align-items: center
+	flex-direction: column
+	&:after
+		content: ' '
+		background: -webkit-radial-gradient(top center, cover, rgba(255,255,255,0.2) 0%,rgba(0,0,0,0.5) 100%)
+
+// Screen Pages
+
+#screens
+	background-color: $light
+	display: flex
+	flex-wrap: wrap
+	justify-content: center
+	overflow-x: scroll
+	// -webkit-overflow-scrolling: touch
+	// overflow-y: scroll
+	img
+		margin: 20px
+		height: 400px !important
+
+// Stack Page
+.center
+	text-align: center
+
+#devTeam
+	background-color: $light
+	padding-top: 40px
+	display: flex
+	flex-direction: column
+	justify-content: space-around
+	align-items: center
+	&:first-child
+		margin-bottom: 200px
+	.team
+		max-width: 800px
+		display: flex
+		justify-content: space-around
+		width: 100%
+		flex-wrap: wrap
+		.prof
+			margin: 0 20px
+			img
+				border-radius: 50%
+				height: 100px
+			p
+				padding-top: 10px
+			p:hover
+				color: $gold
+
+#stack
+	display: flex
+	justify-content: space-around
+	align-items: flex-end
+	margin-bottom: 40px
+	flex-wrap: wrap
+	width: 220px
+	.tool
+		height: 50px
+		margin-bottom: 10px
+
+#stack img
+	-webkit-filter: grayscale(100%)
+	-moz-filter: grayscale(100%)
+	-o-filter: grayscale(100%)
+	filter: grayscale(100%)
+
+#stack img:hover
+	-webkit-filter: grayscale(0%)
+	-moz-filter: grayscale(0%)
+	-o-filter: grayscale(0%)
+	filter: grayscale(0%)
+
+@media (min-width: 375px)
+	#devTeam:first-child
+		margin-bottom: 100px
+	.brand
+		margin-top: 40px
+		margin-left: 40px
+
+	#download
+		top: 40px
+		right: 40px
+
+
+@media (min-width: 443px)
+	#devTeam:first-child
+		margin-bottom: 0
+
+@media (min-width: $foundation-break)
+	#download
+		top: 50px
+	.prof
+		margin: 0 10px
+		img
+			height: 150px !important
+
+@media (min-width: 795px)
+	#stack
+		display: block
+		width: 100%
+		& > a
+			margin: 0 40px
