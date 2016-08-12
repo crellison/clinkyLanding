@@ -4,15 +4,27 @@ body {
   margin: 0;
   position: relative; }
 
+a {
+  text-decoration: none !important; }
+
+.button {
+  padding: 10px 15px 5px 15px; }
+  .button > * {
+    padding: 0;
+    margin: 0; }
+
 .topbar {
   position: absolute;
   top: 0;
   left: 0;
   right: 0; }
 
-.title {
+h1, h2, h3, h4, h5, h6, p, a {
   font-family: "League Spartan", "Helvtica Neue", sans-serif;
-  color: #fff;
+  color: #2e2e2e; }
+
+.title {
+  color: #fcfcfc;
   text-align: center; }
 
 .brand {
@@ -20,29 +32,86 @@ body {
   margin-left: 40px;
   text-align: left; }
 
-#initial {
-  background: url(../static/bg2.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column; }
-
 #download {
   position: absolute;
   top: 40px;
   right: 40px;
   background-color: #f5b606; }
 
+#initial {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../static/bg2.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+  #initial:after {
+    content: " ";
+    background: -webkit-radial-gradient(top center, cover, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%); }
+
+#screens {
+  background-color: #fcfcfc;
+  display: flex;
+  overflow-y: auto; }
+  #screens img {
+    margin: 20px; }
+
+.center {
+  text-align: center; }
+
+#devTeam {
+  background-color: #fcfcfc;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center; }
+  #devTeam .team {
+    max-width: 800px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap; }
+    #devTeam .team .prof {
+      margin: 0 20px; }
+      #devTeam .team .prof img {
+        border-radius: 50%;
+        height: 100px; }
+      #devTeam .team .prof p {
+        padding-top: 10px; }
+      #devTeam .team .prof p:hover {
+        color: #f5b606; }
+
+#stack {
+  display: block;
+  margin-bottom: 40px; }
+  #stack > a {
+    margin: 0 40px; }
+    #stack > a .tool {
+      height: 50px; }
+
+#stack img {
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%); }
+
+#stack img:hover {
+  -webkit-filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
+  -o-filter: grayscale(0%);
+  filter: grayscale(0%); }
+
 @media (min-width: 640px) {
   #download {
-    top: 50px; } }
+    top: 50px; }
+
+  .prof {
+    margin: 0 10px; }
+    .prof img {
+      height: 150px !important; } }
 
 /*# sourceMappingURL=main.css.map */
