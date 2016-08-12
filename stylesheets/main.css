@@ -28,14 +28,14 @@ h1, h2, h3, h4, h5, h6, p, a {
   text-align: center; }
 
 .brand {
-  margin-top: 40px;
-  margin-left: 40px;
+  margin-top: 20px;
+  margin-left: 20px;
   text-align: left; }
 
 #download {
+  top: 20px;
+  right: 20px;
   position: absolute;
-  top: 40px;
-  right: 40px;
   background-color: #f5b606; }
 
 #initial {
@@ -55,9 +55,12 @@ h1, h2, h3, h4, h5, h6, p, a {
 #screens {
   background-color: #fcfcfc;
   display: flex;
-  overflow-y: auto; }
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow-x: scroll; }
   #screens img {
-    margin: 20px; }
+    margin: 20px;
+    height: 400px !important; }
 
 .center {
   text-align: center; }
@@ -69,6 +72,8 @@ h1, h2, h3, h4, h5, h6, p, a {
   flex-direction: column;
   justify-content: space-around;
   align-items: center; }
+  #devTeam:first-child {
+    margin-bottom: 200px; }
   #devTeam .team {
     max-width: 800px;
     display: flex;
@@ -86,12 +91,15 @@ h1, h2, h3, h4, h5, h6, p, a {
         color: #f5b606; }
 
 #stack {
-  display: block;
-  margin-bottom: 40px; }
-  #stack > a {
-    margin: 0 40px; }
-    #stack > a .tool {
-      height: 50px; }
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  width: 220px; }
+  #stack .tool {
+    height: 50px;
+    margin-bottom: 10px; }
 
 #stack img {
   -webkit-filter: grayscale(100%);
@@ -105,6 +113,20 @@ h1, h2, h3, h4, h5, h6, p, a {
   -o-filter: grayscale(0%);
   filter: grayscale(0%); }
 
+@media (min-width: 375px) {
+  #devTeam:first-child {
+    margin-bottom: 100px; }
+
+  .brand {
+    margin-top: 40px;
+    margin-left: 40px; }
+
+  #download {
+    top: 40px;
+    right: 40px; } }
+@media (min-width: 443px) {
+  #devTeam:first-child {
+    margin-bottom: 0; } }
 @media (min-width: 640px) {
   #download {
     top: 50px; }
@@ -113,5 +135,11 @@ h1, h2, h3, h4, h5, h6, p, a {
     margin: 0 10px; }
     .prof img {
       height: 150px !important; } }
+@media (min-width: 795px) {
+  #stack {
+    display: block;
+    width: 100%; }
+    #stack > a {
+      margin: 0 40px; } }
 
 /*# sourceMappingURL=main.css.map */
