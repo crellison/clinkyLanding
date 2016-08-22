@@ -41,5 +41,13 @@
     $('#fixWidth').css({width: window.innerWidth-60})
     $('#devTeam').css({height: window.innerHeight})
     $('#download').click(e => $(e.target).text('NOT YET'))
+    var name = ''
+    $('body').keypress(e => {
+    	name += e.key
+    	if (/sheena/i.test(name))
+    		$('.prof img:first').attr('src','./static/team/eagle.jpg')
+    	if (/abhi/i.test(name))
+    		$('.prof img').attr('src','./static/team/fitness.jpg')
+    })
   </script>
 </html>
