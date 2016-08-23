@@ -46,8 +46,10 @@
     	name += e.key;
     	if (/sheena/i.test(name))
     		$('.prof img:first').attr('src','./static/team/eagle.jpg');
-    	if (/abhi/i.test(name))
+    	if (/abhi/i.test(name)) {
     		$('.prof img').attr('src','./static/team/fitness.jpg');
+    		name = '';
+    	}
     	if (name.length > 6) name = '';
     })
   </script>
