@@ -40,17 +40,18 @@
     //- $('.screen').css({'max-width': window.innerWidth-60, 'max-height': window.innerHeight-40})
     $('#fixWidth').css({width: window.innerWidth-60})
     $('#devTeam').css({height: window.innerHeight})
-    $('#download').click(e => $(e.target).text('NOT YET'))
+    $('#download').click(function(e) {$(e.target).text('NOT YET')});
     var name = '';
-    $('body').keypress(e => {
+    $('body').keypress(function(e) {
     	name += e.key;
-    	if (/sheena/i.test(name))
+    	if (/sheena/i.test(name)) {
     		$('.prof img:first').attr('src','./static/team/eagle.jpg');
+    		name = '';
+    	}
     	if (/abhi/i.test(name)) {
     		$('.prof img').attr('src','./static/team/fitness.jpg');
     		name = '';
     	}
-    	if (name.length > 6) name = '';
     })
   </script>
 </html>
